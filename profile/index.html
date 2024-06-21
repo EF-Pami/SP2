@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../dist/css/main.css">
+  <link rel="icon" href="../assets/img/auction-hub.png" type="image/png">
+  <title>Profile | Auction-Hub</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-auction">
+    <div class="container">
+      <a class="navbar-brand" href="../listings/index.html">
+        <img src="../assets/img/auction-hub.png" alt="Logo" height="50" class="d-inline-block align-top">
+      </a>
+      <div class="d-flex flex-row align-items-center ">
+        <a class="nav-link text-white margin-left m-2 fw-bold text-stroke" href="../listings/index.html">Listings</a>
+        <button class="btn btn-primary btn-auction border-white text-white fw-bold text-stroke d-none"
+          id="logout-btn">Logout</button>
+          <button class="btn btn-primary btn-auction border-white text-white fw-bold text-stroke d-none"
+          id="login-btn">Login</button>
+          <a href="index.html">
+        <div class="profile-circle">
+          <img src="../assetsauction-default-profile.jpg" alt="profile picture" class="profile-image">
+          <img src="../assets/profile_22x22.png" alt="Profile frame" class="profile-frame">
+        </div>
+      </a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-md mt-4">
+    <div class="card col-md-12 rounded-4">
+      <div class="col-12 bg-card rounded-top-4">
+        <h1 class="text-white text-stroke ms-2" id="profileUsername">Username</h1>
+      </div>
+      <div class="container mb-2">
+        <div class="container">
+          <div class="row">
+            <!-- Profile Info -->
+            <div class="col-md-4 position-relative d-flex flex-column justify-content-evenly" id="leftProfile">
+              <div class="profile-page-circle d-flex justify-content-center align-items-center img-fluid">
+                <img src="../assets/auction-default-profile.jpg" alt="profile picture" class="mt-4" id="userAvatar">                
+              </div>
+              <div class="d-flex align-items-end" data-bs-toggle="modal" data-bs-target="#editAvatarModal">
+                <img src="../assets/edit.png" alt="edit avatar" class="edit-avatar" data-toggle="tooltip"
+                  data-placement="top" title="Edit Avatar">
+                <p>Edit avatar</p>
+              </div>
+              <div>
+                <p class="mt-2" id="userBio">Silent bidder, letting the items speak louder than words.</p>
+              </div>
+            </div>
+            <!-- Edit Avatar Modal -->
+            <div class="modal" id="editAvatarModal" tabindex="-1" aria-labelledby="EditAvatarModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header text-white">
+                    <h5 class="modal-title fw-bold text-stroke" id="updateModalLabel">Edit Avatar URL</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <img src="../assets/edit.png" alt="Editing banner image" class="img-fluid">
+                    <!-- Edit Form -->
+                    <form id="editForm">
+                      <div class="mb-3">
+                        <label for="UpdateAvatar" class="form-label">New Avatar URL</label>
+                        <input type="url" class="form-control" id="UpdateAvatar" name="avatar"
+                          placeholder="New URL to avatar IMG">
+                      </div>
+                      <button type="submit" class="btn btn-primary btn-login fw-bold text-stroke">Submit</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- active auctions -->
+            <div class="col-md-8">
+              <div class="col-md-12 border rounded-4 border-grey mt-4 p-0">
+                <h3 class="text-white text-stroke bg-card rounded-top">Users Active Auctions & Wins</h3>
+
+                <div class="pb-2">
+                  <div class="border d-flex justify-content-evenly">
+                    <h4 id="activeAuctions"></h4>
+                   
+                  </div>
+                  <div class="border d-flex justify-content-evenly">
+                    <h4 id="winsAuctions"></h4>
+                     
+                  </div>                
+                </div>
+              </div>
+              <!-- Available Credits -->
+              <div class="col-md-12 border rounded-4 border-grey mt-4 p-0">
+
+                <div class="container mt-4 d-flex flex-column align-items-center">
+                  <div class="d-flex justify-content-center align-items-center">
+                    <div class="m-2">
+                      <img src="../assets/Group 18.jpg" alt="credits icon" class="profile-image">
+                    </div>
+                    <h3 class="text-black" id="creditsProfilePage">Available Credits: xxx$</h3>
+                  </div>
+                  <img src="../assets/img/Bid_auction.png" alt="Auction-Hub's mascot awaiting your bid"
+                    class="img-fluid w-50 align-self-end">
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script defer src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="../src/js/api/profiles/index.js" type="module"></script>
+  <footer>
+    
+  </footer>
+</body>
+
+</html>

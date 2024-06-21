@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../dist/css/main.css">
+  <link rel="icon" href="../assets/img/auction-hub.png" type="image/png">
+  <title>Auction | Auction-Hub</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-auction">
+    <div class="container">
+      <a class="navbar-brand" href="../listings/index.html">
+        <img src="../assets/img/auction-hub.png" alt="Logo" height="50" class="d-inline-block align-top">
+      </a>
+      <div class="d-flex flex-row align-items-center ">
+        <a class="nav-link text-white margin-left m-2 fw-bold text-stroke" href="../listings/index.html">Listings</a>
+        <button class="btn btn-primary btn-auction border-white text-white fw-bold text-stroke d-none" id="logout-btn">Logout</button>
+        <button class="btn btn-primary btn-auction border-white text-white fw-bold text-stroke d-none"
+          id="login-btn">Login</button>
+          <a href="../profile/index.html">
+        <div class="profile-circle">
+          <img src="../assets/auction-default-profile.jpg" alt="profile picture" class="profile-image">
+          <img src="../assets/profile_22x22.png" alt="Profile frame" class="profile-frame">
+        </div>
+      </a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-md mt-4">
+    <div class="card col-md-12 rounded-4">
+      <div class="col-12 bg-card rounded-top-4">
+        <h1 class="text-white text-stroke ms-2" id="auctionTitle">Auction title</h1>
+      </div>
+      <div class="container mb-2">
+        <div class="container">
+          <div class="row">
+            <!-- Item info -->
+            <div class="col-md-4" id="auctionItemInfo">
+             <!-- generated html content with js here -->
+            </div>
+
+            <!-- Bids -->
+            <div class="col-md-8">
+              <div class="col-md-12 border rounded-4 border-grey mt-4 p-0" id="auctionBidsContainer">
+                <h2 class="text-white text-stroke bg-card rounded-top" >Bids</h2>
+                <!-- generate bids here -->
+              </div>
+
+              <div class="col-md-12 border rounded-4 border-grey mt-4 p-0">
+
+                <div class="container mt-4">
+
+                  <form class="row g-3" id="bidForm">
+                    <div class="col-md-12">
+                      <label for="bidAmount" class="form-label">Set bid amount</label>
+                      <div class="input-group">
+                        <span class="input-group-text">$</span>
+                        <input type="number" class="form-control" id="bidAmount" name="bidAmount"
+                          placeholder="Enter bid amount" required>
+                      </div>
+                      <button type="submit" class="btn btn-secondary fw-bold text-stroke mt-4" id="placeBid">Place Bid</button>
+                      <div type="submit" class="btn btn-primary btn-login fw-bold text-stroke mt-4 d-none" id="deleteListing">Delete listing</div>
+                    </div>
+                    <div class="text-danger fw-bold" id="bidError"></div>
+                  </form>
+                  <div class="col-md-12 d-flex">
+                  <div class="col-md-6 d-flex flex-column justify-content-evenly">
+                    <p id="auctionEndsAt"></p>
+                    <div class="d-flex justify-content-center align-items-center">                      
+                      <h5 class="text-black fw-bold" id="creditsProfilePage">Register or Login to bid</h5>                     
+
+                  </div>
+                  </div>
+                  <div class="col-md-6">
+                    <img src="../assets/img/Bid_auction.png" alt="place bid" class="img-fluid bid-img">
+                  </div>
+                </div>
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script defer src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="../src/js/api/Listings/singleListing.js" type="module"></script>
+  <footer>
+    
+  </footer>
+</body>
+</html>

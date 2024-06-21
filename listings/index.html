@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../dist/css/main.css">
+  <link rel="icon" href="../assets/img/auction-hub.png" type="image/png">
+  <title>Listings | Auction-Hub</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-auction">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="../assets/img/auction-hub.png" alt="Logo" height="50" class="d-inline-block align-top">
+      </a>
+      <div class="d-flex flex-row align-items-center ">
+        <button class="btn btn-primary btn-auction border-white text-white fw-bold text-stroke d-none"
+          id="logout-btn">Logout</button>
+          <button class="btn btn-primary btn-auction border-white text-white fw-bold text-stroke d-none"
+          id="login-btn">Login</button>
+          <a href="../profile/index.html">
+        <div class="profile-circle">
+            <img src="../assets/auction-default-profile.jpg" alt="profile picture" class="profile-image">
+            <img src="../assets/profile_22x22.png" alt="Profile frame" class="profile-frame">
+          </div>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  
+
+  <!-- post listing form -->
+  <div class="container bg-card text-black rounded mb-4 col-10" id="hideID">
+    <h2>
+      <a data-bs-toggle="collapse" href="#postForm" role="button" aria-expanded="false" aria-controls="postForm"
+        class="text-white text-decoration-none fw-bold text-stroke">
+        📜 Create an Auction +
+      </a>
+    </h2>
+    <div class="collapse" id="postForm">
+      <!-- Create Auction Form -->
+      <form id="createListingForm">
+        <div class="mb-3">
+          <label for="listingTitle" class="form-label text-white fw-bold text-stroke">Title*</label>
+          <input type="text" class="form-control" id="listingTitle" required>
+        </div>
+        <div class="mb-3">
+          <label for="listingDescription" class="form-label text-white fw-bold text-stroke">Description</label>
+          <textarea class="form-control" id="listingDescription"></textarea>
+        </div>
+        <div class="mb-3">
+          <label class="form-label text-white fw-bold text-stroke">Media URLs</label>
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Media URL 1 (Main Image)" id="mediaUrl1">
+          </div>
+          <div class="input-group">
+            <input type="text" class="form-control mt-2" placeholder="Media URL 2" id="mediaUrl2">
+          </div>
+          <div class="input-group">
+            <input type="text" class="form-control mt-2" placeholder="Media URL 3" id="mediaUrl3">
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="listingEndsAt" class="form-label text-white fw-bold text-stroke">Ends At*</label>
+          <input type="datetime-local" class="form-control" id="listingEndsAt" required>
+        </div>
+        <div class="text-danger fw-bold text-stroke" id="createListingErrors"></div>
+        <button id="createListingBtn" type="button"
+          class="btn btn-auction mb-2 fw-bold text-stroke text-white border-white">Create Listing</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="container mt-4">
+    <div class="row">
+      <div class="col-md-6">
+        <!-- Filter options -->
+        <div class="input-group mb-3">
+          <label class="input-group-text fw-bold" for="auctionFilter">Filter:</label>
+          <select class="form-select  fw-bold" id="auctionFilter">
+            <option value="newest">Newest</option>
+            <option value="endingSoon">Oldest</option>
+            <option value="mostBids">Most Bids</option>
+            <option value="leastBids">Least Bids</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <!-- Search bar and button -->
+        <div class="input-group mb-3">
+          <!-- HTML -->
+          <input type="text" id="searchInput" class="form-control fw-bold" placeholder="Search auctions"
+            aria-label="Search auctions" aria-describedby="searchButton">
+          <button class="btn btn-primary btn-auction text-white fw-bold text-stroke" type="button"
+            id="searchButton">Search</button>
+        </div>
+      </div>
+
+      <div class="form-check form-switch ms-4">
+        <input class="form-check-input" type="checkbox" role="switch" id="showClosedAuctions" checked>
+        <label class="form-check-label fw-bold" for="showClosedAuctions">Show Closed Auctions</label>
+      </div>      
+    
+  </div>  
+
+  <div class="container mb-4" id="listings-container-outer">
+
+    <div class="col-md-12 row d-flex justify-content-evenly gy-3" id="listings-container-inner">
+
+      <!-- 
+        generated Listings html content with js here
+       -->
+
+    </div>
+  </div>
+  <script defer src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="../src/js/api/Listings/index.js" type="module"></script>
+  <footer>
+    
+  </footer>
+</body>
+</html>
