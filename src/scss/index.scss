@@ -1,0 +1,170 @@
+@import "variables.scss";
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  background-color: beige;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0px 0px 30px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-color: $primary;
+    color: white;
+    width: 100%;
+    z-index: 1000;
+    padding: 10px 0;
+}
+
+h1, h2 {
+  color: $heading-color;
+  font-weight: 700;
+}
+
+h3 {
+  color: white;
+  font-weight: 700;
+}
+
+p,
+a {
+  font-weight: 600;
+}
+
+.nav-link {
+    font-size: 32px;
+}
+
+.navbar-brand img {
+    width: 100px;
+    height:auto;
+}
+
+.btn-login,
+.btn-auction,
+.bg-card {
+  background-color: $auction-primary-color;
+}
+
+.btn-secondary {
+  background-color: $beta;
+}
+
+.modal-header,
+.navbar-auction {
+  background-color: $primary;
+}
+
+.form-label {
+  color: $heading-color;
+}
+
+.profile-circle {
+  display: flex;
+  max-width: 50px;
+  max-height: 50px;
+  border-radius: 50%;
+  position: relative;
+  margin-left: 10px;
+}
+
+.profile-image {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.profile-frame {
+  width: 120%;
+  position: absolute;
+  top: 44%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.edit-avatar {
+  max-width: 60px;
+  cursor: pointer;
+}
+
+.text-stroke {
+  text-shadow: $text-stroke;
+}
+
+.custom-shape-divider-bottom-1707191989 {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1707191989 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 101px;
+}
+
+.custom-shape-divider-bottom-1707191989 .shape-fill {
+  fill: #005467;
+}
+
+.border-grey {
+  border: solid 5px black;
+}
+
+.bid-img {
+  display: flex;
+  justify-self: end;
+  max-width: 250px;
+  height: auto;
+}
+
+.card-img {
+  max-width: 260px;
+  height: 260px;
+}
+
+.profile-page-circle {
+  display: flex;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  position: relative;
+  margin-left: 10px;
+}
+
+#userAvatar {
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 15px #005467; 
+}
+
+#hideID {
+    margin-top: 40PX;
+}
+
+#listings-container-inner {
+    margin-bottom: 95px;
+}
