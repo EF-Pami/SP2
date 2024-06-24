@@ -29,6 +29,7 @@ The following steps can be followed if you wish to deploy the site on your compu
 ### run the following command in your terminal
 
 ```npm i```
+
 ```npm run build```
 
 
@@ -39,6 +40,7 @@ Contributions to this project are highly appreciated, make sure to open a pull r
 I can be as well contacted via the following:
 
 Email: pamijoelpami@gmail.com
+
 gitHub: EF-Pami
 
 ### Codes inspiration
