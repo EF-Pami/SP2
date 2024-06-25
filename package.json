@@ -27,10 +27,10 @@
   "homepage": "https://github.com/EF-Pami/SP2#readme",
   "devDependencies": {
     "live-server": "^1.2.2",
+    "prettier": "^3.3.2",
     "sass": "^1.77.6"
   },
   "dependencies": {
-    "bootstrap": "^5.3.3",
-    "prettier": "^3.3.2"
+    "bootstrap": "^5.3.3"
   }
 }
