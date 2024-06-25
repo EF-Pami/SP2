@@ -9,7 +9,7 @@
     "build:netlify": "npm run build:scss && npm run copy",
     "build:local": "npm run build:scss && npm run copy",
     "build": "npm run build:netlify",
-    "watch": "sass src/scss:dist/css --watch",
+    "watch": "sass  --watch src/scss:dist/css",
     "dev": "npm run watch & live-server"
   },
   "repository": {
@@ -30,6 +30,7 @@
   "homepage": "https://github.com/EF-Pami/SP2#readme",
   "devDependencies": {
     "live-server": "^1.2.2",
+    "netlify-cli": "^17.29.0",
     "prettier": "^3.3.2",
     "sass": "^1.77.6"
   },
