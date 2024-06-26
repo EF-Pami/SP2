@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:scss": "sass src/scss:dist/css",
-    "build:netlify": "npm run build:scss && npm run copy",
-    "build:local": "npm run build:scss && npm run copy",
+    "build:netlify": "npm run build:scss",
+    "build:local": "npm run build:scss",
     "build": "npm run build:netlify",
     "watch": "sass  --watch src/scss:dist/css",
     "dev": "npm run watch & live-server"
