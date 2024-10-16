@@ -7,7 +7,8 @@ export async function fetchUserProfile() {
     const apiKey = API_KEY;
     const userName = localStorage.getItem("userName");
 
-    if (!userName) {     
+    if (!userName || !accessToken) {
+      console.error("User name or access Token is missing.")     
       return;
     }
 
@@ -27,15 +28,14 @@ export async function fetchUserProfile() {
 
     if (response.ok) {
       const data = await response.json();
-      const profileData = data.data;
+      console.log("Profile data fetched successfully:", data.data);
+      return data.data;
     } else {
-      alert(
-        "Error fetching user profile:",
-        response.status,
-        response.statusText,
+      console.error(
+        `Error fetching user profile: ${response.status}${response.statusText}`
       );
     }
   } catch (error) {
-    alert("Fetch error:", error.message);
+    console.error("Fetch error:", error.message);
   }
 }
